@@ -7,7 +7,7 @@ div_a = 3
 div_b = 5
 
 def error_check(test):
-    # convert input to integer, exit program is input is not a number
+    # convert input to integer, exit program if input is not a number
     try:
         tested = int(test)
         return tested
@@ -16,11 +16,13 @@ def error_check(test):
         exit()
 
 def fizzbuzz():
-    # Fizzbuzz logic:
-    # Print all num in seq,
-    # replace with "fizz" if divisible by div_a,
-    # with "buzz" if divisible by div_b
-    # and with "fizzbuzz" if divisible by div_a AND div_b
+    '''
+    Fizzbuzz logic:
+    Print all num in seq,
+    replace with "fizz" if divisible by div_a,
+    with "buzz" if divisible by div_b
+    and with "fizzbuzz" if divisible by div_a AND div_b
+    '''
     global div_a, div_b, seq
     for num in seq:
         if num % div_a == 0 and num % div_b == 0:
@@ -31,10 +33,11 @@ def fizzbuzz():
             print "buzz"
         else:
             print num
-
-# Get user input
-# run error_check if length of input is > 0
-# variable will not be changed from default if input is <= 0
+'''
+Get user input
+run error_check if length of input is > 0
+variable will not be changed from default if input is <= 0
+'''
 a = raw_input("Enter fizz divisor \n")
 if len(a) > 0:
     div_a = error_check(a)
